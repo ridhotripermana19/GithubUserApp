@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Github user\'s search Apps</string>
+    <string name="splash_image">Splash Activity Image</string>
+    <string name="user_image">User Image</string>
+    <string name="user_name">Triwibowo</string>
+    <string name="txt_user_name">User Name</string>
+    <string name="divider">Divider</string>
+    <string name="txt_user_company">Company</string>
+    <string name="user_company">Dicoding Indonesia</string>
+    <string name="user_full_name">Dicoding</string>
+    <string name="tab_follower">Follower</string>
+    <string name="tab_following">Following</string>
+    <string name="txt_full_name">Full Name</string>
+    <string name="search_here">Search Here</string>
+    <string name="change_language">Change Language</string>
+    <string name="user_not_found">User not found. Please check your username… </string>
+    <string name="error_access_api">Error while accessing API</string>
+    <string name="submission">Github User\'s Search Apps</string>
+    <string name="error">Error</string>
+</resources>

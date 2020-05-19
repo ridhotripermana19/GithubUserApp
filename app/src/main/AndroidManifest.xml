@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.githubapps">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver android:name=".widget.FavoriteBannerWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/favorite_banner_widget_info" />
+        </receiver>
+
+        <provider
+            android:name=".provider.FavoriteProvider"
+            android:authorities="com.example.githubapps"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name="com.example.githubapps.widget.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <activity android:name=".view.favorite.FavoriteDetails" />
+        <activity android:name=".view.favorite.Favorite" />
+        <activity android:name=".view.reminder.Reminder" />
+        <activity android:name=".view.detail.Details" />
+        <activity android:name=".view.search.SearchUser" />
+        <activity
+            android:name=".view.splash.Splash"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".receiver.TimeChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiver.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiver.NotificationReceiver" />
+
+    </application>
+</manifest>

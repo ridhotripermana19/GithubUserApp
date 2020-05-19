@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplikasi Pencarian Pengguna Github</string>
+    <string name="splash_image">Gambar Splash Activity</string>
+    <string name="user_image">Gambar Pengguna</string>
+    <string name="user_name">Triwibowo</string>
+    <string name="txt_user_name">User Name</string>
+    <string name="divider">Pemisah</string>
+    <string name="txt_user_company">Perusahaan</string>
+    <string name="user_company">Dicoding Indonesia</string>
+    <string name="user_full_name">Dicoding</string>
+    <string name="tab_follower">Pengikut</string>
+    <string name="tab_following">Mengikuti</string>
+    <string name="txt_full_name">Nama Lengkao</string>
+    <string name="search_here">Cari Disini</string>
+    <string name="change_language">Ganti Bahasa</string>
+    <string name="user_not_found">Pengguna tidak ditemukan. Silakan periksa nama pengguna Anda… </string>
+    <string name="error_access_api">Kesalahan saat mengakses API</string>
+    <string name="submission">Aplikasi Pencarian Pengguna Github</string>
+    <string name="error">Terjadi Kesalahan</string>
+</resources>

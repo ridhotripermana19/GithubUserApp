@@ -62,7 +62,7 @@ class Reminder : AppCompatActivity(), View.OnClickListener {
                         val date = sdf.parse(formattedDate)
                         if (date != null)
                             timeInMilliSeconds = date.time
-                    }, hour, minute, false)
+                    }, hour, minute, true)
                 timePickerDialog.show()
             }
 
@@ -78,7 +78,7 @@ class Reminder : AppCompatActivity(), View.OnClickListener {
 
             R.id.btn_cancelAlarm -> {
                 sharedPreference.clearSharedPreference()
-                AlarmUtils.cancelAlarm(this, timeInMilliSeconds)
+                AlarmUtils.cancelAlarm(this)
                 startTimeText.text = this.getString(R.string.enterTime)
                 note.text = this.getString(R.string.note)
                 btn_setAlarm.isEnabled = true

@@ -22,10 +22,9 @@ object AlarmUtils {
         }
     }
 
-    fun cancelAlarm(context: Context, timeOfAlarm: Long) {
+    fun cancelAlarm(context: Context) {
         val broadcastIntent = Intent(context, NotificationReceiver::class.java)
 
-        // reqcode = 0 (alarm hanya 1 yaitu RepeatingAlarm)
         val pIntent = PendingIntent.getBroadcast(context, 0, broadcastIntent, 0)
         pIntent.cancel()
 

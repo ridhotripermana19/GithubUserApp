@@ -32,6 +32,7 @@ class Reminder : AppCompatActivity(), View.OnClickListener {
         applicationContext.packageManager.setComponentEnabledSetting(receiver, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
 
         sharedPreference = SharedPreference(this)
+
         btn_setAlarm.setOnClickListener(this)
         btn_cancelAlarm.setOnClickListener(this)
         startTimeText.setOnClickListener(this)
@@ -79,6 +80,7 @@ class Reminder : AppCompatActivity(), View.OnClickListener {
             R.id.btn_cancelAlarm -> {
                 sharedPreference.clearSharedPreference()
                 AlarmUtils.cancelAlarm(this)
+                timeInMilliSeconds = 0
                 startTimeText.text = this.getString(R.string.enterTime)
                 note.text = this.getString(R.string.note)
                 btn_setAlarm.isEnabled = true

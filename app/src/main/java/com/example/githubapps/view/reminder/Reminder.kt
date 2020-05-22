@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.githubapps.R
-import com.example.githubapps.receiver.BootCompleteReceiver
+import com.example.githubapps.receiver.NotificationReceiver
 import com.example.githubapps.utils.AlarmUtils
 import com.example.githubapps.utils.SharedPreference
 import com.example.githubapps.utils.SharedPreference.Companion.SAVED_LONG
@@ -27,7 +27,7 @@ class Reminder : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_reminder)
         setTitle(R.string.reminder)
 
-        val receiver = ComponentName(applicationContext, BootCompleteReceiver::class.java)
+        val receiver = ComponentName(applicationContext, NotificationReceiver::class.java)
 
         applicationContext.packageManager.setComponentEnabledSetting(receiver, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
 
